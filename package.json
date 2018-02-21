@@ -1,0 +1,25 @@
+{
+  "name": "aragonapplication",
+  "version": "0.0.1",
+  "description": "Payroll application for aragon solidity engineer position",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm run ganache-cli:dev && truffle test --network rpc",
+    "lint": "solium --dir ./contracts",
+    "coverage": "node_modules/.bin/solidity-coverage",
+    "ganache-cli:dev": "scripts/ganache-cli.sh",
+    "ganache-cli:coverage": "SOLIDITY_COVERAGE=true scripts/ganache-cli.sh"
+  },
+  "author": "Chris Purta",
+  "license": "ISC",
+  "devDependencies": {
+    "ganache-cli": "^6.0.3",
+    "solc": "^0.4.19",
+    "solidity-coverage": "^0.4.9",
+    "solium": "^1.1.3",
+    "truffle": "^4.0.6"
+  }
+}
